@@ -1,0 +1,35 @@
+@use "../abstracts" as b;
+
+
+$padding-container:8.62rem;
+
+@function clac-padding($number) {
+  @return $number / 2;
+}
+
+@mixin flex_space ($space , $gap) {
+    display:flex;
+    align-items: center;
+    justify-content: $space;
+    gap: $gap;
+}
+
+  @mixin inline ($gap) {
+    display: inline-flex;
+    gap: $gap;
+  }
+
+  @mixin resposive ($breackpoint) {
+    @media (max-width:$breackpoint) {
+      flex-direction: column;
+    }
+  }
+
+  @mixin container($bg-color) {
+    padding: 0 clac-padding($padding-container);
+    @media (min-width:map-get(b.$breackpoints,lg)) {
+        padding:0 $padding-container;
+    }
+    background-color:$bg-color;
+
+  }

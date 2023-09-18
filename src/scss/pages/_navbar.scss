@@ -1,0 +1,53 @@
+@use "../components" as c ;
+@use "../abstracts" as b ;
+@use "../../main.scss" as m;
+
+
+.navbar {
+height: 13rem;
+@include c.container(map-get(b.$colors,primery));
+
+@include c.flex_space(space-between , 0);
+.navbar_logo {
+    @include c.flex_space(none ,2.81rem);
+    .logo {
+max-width: 19.1875rem;
+max-height: 7.1875rem;
+    }
+    .menu {
+        max-width: 5.875rem;
+        max-height: 4.4375rem;
+        cursor: pointer;
+    }
+}
+.navbar_contact {
+    @include c.flex_space(none ,1.62rem);
+    .number {
+        color:map-get(b.$colors, Whitey );
+        font-family: b.$thored-font-family;
+font-size: 1.625rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+        
+    }
+    .reservations {
+        padding: 1.25rem 2.875rem;
+        border: 2px solid map-get(b.$colors, Whitey );
+        @include b.Heading_5 (map-get(b.$colors, Whitey ));
+        cursor: pointer;
+    }
+}
+}
+
+        @media (max-width:map-get(b.$breackpoints , xl)) {
+            .navbar {
+                .navbar_logo {
+                    @include c.flex_space(space-between ,2.81rem);
+                    width: 100%;
+                }
+                .navbar_contact{
+                    display: none;
+                }
+            } 
+        }

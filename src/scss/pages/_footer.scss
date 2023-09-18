@@ -1,0 +1,70 @@
+@use "../components" as c ;
+@use "../abstracts" as b ;
+@use "../utilities" as u ;
+
+.footer_container {
+    @include c.container(map-get(b.$colors,primery));
+    .footer {
+        padding-top: 8.25rem !important;
+        padding-bottom: 8.56rem !important;
+   @include u.grid(600px , 10rem);
+   h1 {
+color: map-get(b.$colors, Whitey );
+font-size: 4.25rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+span {
+    display: block;
+}
+   }
+
+   .contact {
+    .contact_titel {
+        @include b.Heading_5(map-get(b.$colors , Whitey));
+        margin-bottom: 3.44rem
+    }
+    > .contact_number {
+        margin-bottom: 1.75rem;
+    }
+        .contact_number {
+            @include b.Widgets_Text(map-get(b.$colors , Whitey));
+            .uniq {
+                display: block;
+            }
+        }
+   }
+
+   .email {
+    h1 {
+        @include b.Heading_5(map-get(b.$colors , Whitey));
+        margin-bottom: 3.44rem;
+    }
+    form {
+        display: grid;
+        gap: 1rem;
+        input[type="submit"] {
+            @include c.submit(map-get(b.$colors , scondary)  , map-get(b.$colors , Whitey) );
+        }
+        input[type="text"] {
+            @include c.input( map-get(b.$colors,Whitey ) , map-get(b.$colors,Whitey ) );
+            background-color: transparent;
+        }
+    }
+   }
+}
+.Reserved {
+    @include c.flex-space(space-between , 1rem);
+    padding:  3.63rem 0 4.64rem;
+    border-top: 2px dotted map-get(b.$colors,Whitey);
+    h1 {
+        @include b.body(map-get(b.$colors , Whitey));
+    }
+    .list_icon {
+        display: flex;
+        align-items: center;
+        gap: 1.75rem;
+    }
+
+}
+}

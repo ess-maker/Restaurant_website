@@ -1,0 +1,43 @@
+@use "../components" as c ;
+@use "../abstracts" as b ;
+@use "../components/button" as bun;
+
+.reservation_container {
+    padding: 14.8125rem 0 15.875rem 0;
+    text-align: center;
+    h1 {
+        @include b.Heading_1(map-get(b.$colors , blacky));
+        margin-bottom: 1.13rem;
+    }
+    p {
+        @include b.body(map-get(b.$colors , blacky));
+    }
+    .chose_date {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    margin: 8.31rem 0;
+        input[type = "date"] , 
+        select  {
+            padding: 1.875rem 2.5rem;
+            @include b.body(map-get(b.$colors , blacky));
+            width: calc(100% / 4);
+            outline: transparent;
+            border: 2px solid map-get(b.$colors , blacky);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        input[type = "date"]::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+    }
+    input[type = "submit"] {
+        display: block;
+        margin: auto;
+        @include bun.submit(map-get(b.$colors , primery) , map-get(b.$colors , Whitey) )
+    }
+
+}

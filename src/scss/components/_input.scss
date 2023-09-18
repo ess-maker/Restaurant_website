@@ -1,0 +1,10 @@
+@use "../abstracts" as b ;
+
+
+@mixin input ($color , $bordercolor) {
+    padding: 1.875rem 2.5rem;
+    @include b.body(map-get(b.$colors , $color));
+    outline: transparent;
+    border: 2px solid $bordercolor;
+    color: $color;
+}

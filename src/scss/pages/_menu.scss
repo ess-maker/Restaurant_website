@@ -1,0 +1,50 @@
+@use "../components" as c ;             
+@use "../abstracts" as b ;
+@use "../../main.scss" as main ; 
+
+
+.menu_container {
+position: relative;
+margin-top: 12rem;
+.menu_title {
+    @include b.Heading_1(map-get(b.$colors , blacky));
+    margin-bottom: 1.13rem;
+}
+.menu_description {
+    @include b.body(map-get(b.$colors , blacky));
+}
+.menu_plant {
+    position: absolute;
+    top:0;
+    right: -8rem;
+    @media (max-width:map-get(b.$breackpoints , xl)) {
+        display: none;
+    }
+    opacity: .5;
+}
+
+}
+.list_container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.75rem;
+    margin: 10rem 0 ;
+    .menu_item {
+        .list_price {
+            @include b.Heading_4(map-get(b.$colors , blacky));
+            text-align: right;
+        }
+        .list_titel {
+            @include b.Heading_3(map-get(b.$colors , blacky));
+            margin: 1.5rem 0 ;
+        }
+        .list_discrption {
+            @include b.body(map-get(b.$colors , blacky));
+        }
+    }
+
+    
+}

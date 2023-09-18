@@ -1,0 +1,41 @@
+@use "../components" as c ;             
+@use "../abstracts" as b ;
+
+.diet_container {
+    @include c.flex_space(space-between , 1rem);
+    @include c.resposive (map-get(b.$breackpoints , 2xl));
+    padding: 10rem  0;
+    .diet-one {
+        img {
+            max-width: 37rem;
+        }
+        max-width: 45rem;
+        .diet-titel {
+            @include b.Heading_1(map-get(b.$colors , Whitey));
+            margin: 54px 0;
+            @media (max-width:map-get(b.$breackpoints , md)) {
+                text-align: center;
+            }
+        }
+        .diet-discrption {
+            @include b.body(map-get(b.$colors , Whitey));
+        }
+    }
+
+    .diet-two {
+        img {
+            max-width: 37rem;
+        }
+        p {
+            @include b.body(map-get(b.$colors , Whitey));
+            max-width: 32rem;
+            margin-bottom: 5rem;
+            @media (max-width:map-get(b.$breackpoints , md)) {
+                margin: 3rem 0 ;
+            }
+        }
+
+    }
+
+
+}

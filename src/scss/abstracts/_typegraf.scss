@@ -1,0 +1,141 @@
+@use "./variables" as b ;
+
+@mixin Large_Title ($color) {
+color:$color;
+font-size: 9.25rem;
+font-style: normal;
+font-weight: 700;
+line-height: 9.5rem;
+}
+@mixin Heading_1 ($color) {
+    color: $color;
+    font-size: 6.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7.5rem;
+    }
+    @mixin Heading_2 ($color) {
+        color:$color;
+        font-size: 5.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+ }
+
+ @mixin Heading_3 ($color) {
+    color:$color;
+    font-size: 4.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 5.25rem;
+}
+
+@mixin Heading_4 ($color) {
+    color:$color;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+@mixin Heading_5 ($color) {
+    color:$color;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+@mixin Heading_6 ($color) {
+    color:$color;
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; 
+}
+
+@mixin Widgets_Title($color) {
+    color:$color;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 126%; 
+}
+
+@mixin Widgets_Text ($color) {
+    color:$color;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem; /* 138.889% */
+    letter-spacing: 0.0225rem;
+}
+
+@mixin nav_item ($color) {
+    color:$color;
+    font-size: 4.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+@mixin Nav_Subitem ($color) {
+    color:$color;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+@mixin body ($color) {
+    color:$color;
+    font-family: b.$secondary-font-family;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 2.1rem */
+    letter-spacing: 0.03rem;
+}
+@mixin body_b ($color) {
+    color:$color;
+    font-family: b.$secondary-font-family;
+    font-size: 1.5rem; 
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 2.1rem */
+    letter-spacing: 0.03rem;
+}
+@mixin body_cap ($color) {
+    color:$color;
+    font-family: b.$secondary-font-family;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.75rem */
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+}
+@mixin Excerpt  ($color) {
+    color:$color;
+    font-family: b.$secondary-font-family;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 1.925rem */
+    letter-spacing: 0.0275rem;
+}
+@mixin Label ($color) {
+    font-family: b.$secondary-font-family;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.0225rem;
+}
+@mixin Widgets_Comments ($color) {
+    font-family: b.$secondary-font-family;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.0175rem;
+}

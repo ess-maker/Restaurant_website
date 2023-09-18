@@ -1,0 +1,21 @@
+@use "./scss/abstracts" as b;
+@use "./scss/components" as c ;
+@use "./scss/base";
+
+
+
+
+.app {
+    .app_one {
+        @include c.container(map-get(b.$colors,primery))
+    }
+    .app_two , 
+    .app_there,
+    .app_six {
+        @include c.container(map-get(b.$colors,Whitey))
+    }
+    .app_three,
+    .app_five {
+        @include c.container(map-get(b.$colors,EBF0E4))
+    }
+}

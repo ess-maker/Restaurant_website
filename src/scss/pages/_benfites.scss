@@ -1,0 +1,34 @@
+@use "../components" as c ;
+@use "../abstracts" as b ;
+
+
+.Benfits_container {
+    padding: 12.9375rem 0 11.875rem 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    @media (max-width:map-get(b.$breackpoints , xl)) {
+        justify-content: center;
+    }
+.benfite_element {
+    text-align: center;
+    img {
+        width: 11.5rem;
+height: 11.5rem;
+background-color: map-get(b.$colors , EBF0E4);
+padding: 2.38rem;
+border-radius: 50%;
+    }
+    h1 {
+        @include b.Heading_4(map-get(b.$colors , blacky));
+        margin: 2.44rem 0 ;
+    }
+    p {
+        @include b.body(map-get(b.$colors , dark-gray));
+        max-width: 35rem;
+    }
+}
+}

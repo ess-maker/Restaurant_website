@@ -1,0 +1,12 @@
+@use "../abstracts" as b ;
+
+@mixin submit ($bgcolor , $fontcolor) {
+width: 21.5rem;
+padding: 1.25rem 2.875rem;
+@include b.Heading_5(map-get(b.$colors , blacky));
+background-color: $bgcolor;
+outline: none;
+color:$fontcolor ;
+border: none;
+cursor: pointer;
+}

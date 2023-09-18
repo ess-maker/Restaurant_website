@@ -1,0 +1,52 @@
+@use "../components" as c ;
+@use "../abstracts" as b ;
+
+.hero {
+    @include c.flex_space(space-between , 1rem);
+    @include c.resposive (map-get(b.$breackpoints , xl));
+    padding: 10rem  0 ;
+    .hero_content {
+        margin-top: -7rem;
+        position: relative;
+        z-index: 2;
+        .hero_titel {
+            @include b.Heading_1(map-get(b.$colors , Whitey));
+            margin-bottom: 3.12rem;
+            .uniq {
+                display: block
+            }
+            @media (max-width:map-get(b.$breackpoints , md)) {
+                text-align: center;
+            }
+        }
+        .hero_discrption {
+            @include b.body(map-get(b.$colors , Whitey));
+            max-width: 40rem;
+            margin: 3.12rem 0 ;
+        }
+        .hero_Scroll {
+            cursor: pointer;
+        }
+    }
+    .hero_imges {
+        position: relative;
+        .hero_img {
+            width: 100%;
+        }
+        .hero_spices {
+            @include c.flex_space(space-between , 2.76rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.76rem;
+            position: absolute;
+            bottom: 0;
+            @media (min-width:map-get(b.$breackpoints , xl)) {
+                left: -20rem;
+            }
+            @media (max-width:map-get(b.$breackpoints , md)) {
+                display: none;
+            }
+        }
+    }
+}

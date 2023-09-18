@@ -1,0 +1,40 @@
+@use "../components" as c ;             
+@use "../abstracts" as b ;
+@use "../utilities" as u;
+
+
+.Category_container {
+    padding: 8rem 0 8.62rem 0 ;
+    text-align: center;
+    .Category_titel {
+        @include b.Heading_1(map-get(b.$colors , blacky));
+        margin-bottom: 1.13rem;
+    }
+    .Category_discrption {
+        @include b.body(map-get(b.$colors , blacky));
+    }
+    .holder {
+        @include u.grid(600px , 3.75rem);
+        margin-top: 7.88rem;
+        .category_img {
+            width: 100%;
+            position: relative;
+        }
+        
+        .Category_element {
+            position: relative;
+            cursor: pointer;
+            .content {
+                @include c.flex-space(space-between , 1rem);
+                position: absolute;
+                top: 3rem;
+                margin: 0 2rem;
+                width: calc(100% - 4rem);
+                h3 {
+                    @include b.Heading_4(map-get(b.$colors , primery));
+                    margin-bottom: -5rem;
+                }
+            }
+        }
+    }
+}

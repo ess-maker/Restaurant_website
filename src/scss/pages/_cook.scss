@@ -1,0 +1,44 @@
+@use "../components" as c ;             
+@use "../abstracts" as b ;
+
+.cook_container{
+    padding-top:13.5rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 3.80rem;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    width: 100%;
+    .treeplan {
+        position: absolute;
+        left: -7rem;
+        top: 8rem;
+        transform: rotate(100.312deg);
+        z-index: -1;
+    }
+    .treeplantwo {
+        position: absolute;
+        right:0;
+        bottom: 8rem;
+        transform: rotate(100.312deg);
+        z-index: -1;
+    }
+    .cook_content {
+        .cook_titel {
+            @include b.Heading_1(map-get(b.$colors , blacky));
+            margin-bottom: 1.12rem;
+            .uniq {
+                display: block;
+            }
+        }
+
+        .cook_discrption {
+            @include b.body(map-get(b.$colors , dark-gray));
+            max-width: 45rem;
+        }
+    }
+    
+
+}
